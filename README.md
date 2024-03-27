@@ -1,28 +1,84 @@
 # Genstruct-7B //beta-test
 
-Представляет собой модель генерации инструкций, разработанную для создания действительных инструкций на основе исходного текстового корпуса. 
+Добро пожаловать в репозиторий Genstruct-7B //beta-test! Здесь вы найдете модель для генерации инструкций на основе текстового корпуса.
 
-Эта модель позволяет создавать новые, частично синтетические наборы данных для донастройки инструкций из любого текстового корпуса. 
+## Описание проекта
 
-Для использования данного репозитория вам необходимо загрузить модель и токенизатор, а затем можно приступить к генерации инструкций.
+#Genstruct-7B 
 
-# command 
+//beta-test представляет собой модель генерации инструкций, разработанную для создания действительных инструкций на основе исходного текстового корпуса. Эта модель позволяет создавать новые, частично синтетические наборы данных для донастройки инструкций из любого текстового корпуса.
 
-``` terminal conda 
+### !!!Важно: На данный момент данный репозиторий находится в бета-тесте.!!!
 
-conda create -n Genstruct python=3.10  // создаем наше отдельное виртуальное окружение обязательно python 3.10 [3.12/3.11 not working]
-conda activate Genstruct // активируем наше виртуальное окружение 
-conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch // для работы cuda
-pip install transformers 
-pip install autoawq // !!! найти точную версию для установки !!!
-pip install jupyter notebook //для завода связки GPU
-pip install tensorflow // для связки с jupyter + tensorflow = GPU[0]:true
 
-проверяем работу tensorflow GPU:
+## Установка и настройка
 
-import tensorflow as Genstruct
-gpus = Genstruct.config.experimental.list_physical_devices('GPU*)
+Для начала работы с Genstruct-7B //beta-test, выполните следующие шаги:
+
+### 1. Создание виртуального окружения
+
+Для изоляции проекта рекомендуется создать новое виртуальное окружение. Выполните следующие команды в терминале:
+
+```python
+conda create -n Genstruct python=3.10
+conda activate Genstruct
+```
+
+### 2. Установка зависимостей
+
+Установите необходимые библиотеки, выполнив следующие команды:
+
+```python
+conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+pip install transformers
+pip install jupyter notebook
+pip install autoawq
+```
+
+### 3. Проверка настройки TensorFlow GPU
+
+Для использования GPU в TensorFlow, убедитесь, что настройка выполнена корректно. Выполните следующую команду:
+
+```python
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+
+если все настроено правильно вы получаете ответ :
+
+[PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+```
+
+### 4. Запуск Jupyter Notebook
+
+Запустите Jupyter Notebook, чтобы проверить доступность GPU. Введите следующую команду в терминале:
+```python
+conda activate Genstruct ##активируем наше виртуальное окружение 
+pip install ipykernel
+python -m ipykernel install --user --name=Genstruct ##Добавляем наше окружение в Jupyter Notebook
+jupyter notebook ##Откроется браузер сос тратовой страницей Jupyter Notebook 
+```
+
+Выберите виртуальное окружение Genstruct (сверху справа) в интерфейсе Jupyter Notebook и перейдите в него. 
+Вводим команду:
+
+```shell
+import tensorflow as Gentrust
+gpus = Gentrust.config.experimental.list_physical_devices('GPU')
 print (gpus)
 
 ```
+Если все настроено правильно и GPU работает вы получаете ответ : 
 
+```
+[GPU:0', device_type='GPU']
+```
+
+### 5. Генерация инструкций
+
+Теперь вы готовы к генерации инструкций с использованием модели Genstruct-7B //beta-test. Следуйте инструкциям и документации, чтобы получить желаемые результаты.
+
+## Дополнительная информация
+
+Дополнительные сведения и примеры использования можно найти в документации репозитория.
+
+Мы надеемся, что Genstruct-7B //beta-test поможет вам создавать качественные инструкции и улучшит ваш опыт работы с текстовыми данными. Желаем вам успехов!
