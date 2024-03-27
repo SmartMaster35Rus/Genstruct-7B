@@ -77,7 +77,7 @@ jupyter notebook ##Откроется браузер сос тратовой с�
 Выберите виртуальное окружение Genstruct (сверху справа) в интерфейсе Jupyter Notebook и перейдите в него. 
 Вводим команду:
 
-```shell
+```python
 import tensorflow as Genstruct
 gpus = Genstruct.config.list_physical_devices('GPU')
 print ( gpus )
@@ -85,7 +85,7 @@ print ( gpus )
 ```
 Если все настроено правильно и GPU работает вы получаете ответ : 
 
-```
+```python
 [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
 ```
 
