@@ -62,9 +62,9 @@ jupyter notebook ##Откроется браузер сос тратовой с�
 Вводим команду:
 
 ```shell
-import tensorflow as Gentrust
-gpus = Gentrust.config.experimental.list_physical_devices('GPU')
-print (gpus)
+import tensorflow as Genstruct
+gpus = Genstruct.config.list_physical_devices('GPU')
+print ( gpus )
 
 ```
 Если все настроено правильно и GPU работает вы получаете ответ : 
