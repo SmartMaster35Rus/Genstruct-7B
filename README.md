@@ -34,6 +34,8 @@ conda activate Genstruct
 conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
 pip install transformers
+pip install torch --upgrade --index-url https://download.pytorch.org/whl/cu121
+pip install xformers --upgrade --index-url https://download.pytorch.org/whl/cu121
 pip install jupyter notebook
 python -m pip install "tensorflow<2.11"
 pip install autoawq
