@@ -31,7 +31,7 @@
 Для изоляции проекта рекомендуется создать новое виртуальное окружение. Выполните следующие команды в терминале:
 
 ```python
-conda create -n Genstruct python=3.10
+conda create -n Genstruct python=3.10 ##не поддерживется запуск Python3.11/3.12 выполняется на 3.10
 conda activate Genstruct
 ```
 
