@@ -1,5 +1,7 @@
 from awq import AutoAWQForCausalLM
 from transformers import AutoTokenizer, TextStreamer
+import torch 
+
 
 model_path = "solidrust/Genstruct-7B-AWQ"
 system_message = "You are Genstruct, incarnated as a powerful AI."
