@@ -28,11 +28,14 @@ conda activate Genstruct
 
 Установите необходимые библиотеки, выполнив следующие команды:
 
+## Верссии tensorflow выше 2.10 не работают на Windows поэтому ставим версию ниже 2.11
+
 ```python
 conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
 pip install transformers
 pip install jupyter notebook
+python -m pip install "tensorflow<2.11"
 pip install autoawq
 ```
 
