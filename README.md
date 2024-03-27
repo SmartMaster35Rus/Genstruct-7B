@@ -12,7 +12,6 @@
 |  Диск          |  M.2 PCIe SSD Samsung SSD 980 PRO 1000 ГБ  |
 |  Диск          |  M.2 PCIe SSD XPG GAMMIX S11 Pro 1000 ГБ |
 |  Дискретная графика  |  NVIDIA GeForce RTX 4090 24 ГБ  |
-|  Модель Whisper  |  Whisper Large-v3  |
 |  CudaToolkit   |  ver.12.3  |
 |  OS   |  Windows 11 Pro |
 
