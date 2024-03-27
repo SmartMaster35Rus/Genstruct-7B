@@ -70,7 +70,7 @@ print ( gpus )
 Если все настроено правильно и GPU работает вы получаете ответ : 
 
 ```
-[GPU:0', device_type='GPU']
+[PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
 ```
 
 ### 5. Генерация инструкций
